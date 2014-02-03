@@ -21,16 +21,14 @@
 		navClass =  pluginName + "-nav",
 		prototype,
 		cssTransitionsSupport = (function(){
-			var prefixes = "webkit Moz O Ms".split( " " ),
-				supported = false,
+			var prefixes = "Webkit Moz O Ms".split( " " ),
+				styles = document.documentElement.style,
+				supported = ( "transition" in styles ),
 				property;
 
-			while( prefixes.length ){
-				property = prefixes.shift() + "Transition";
-
-				if ( property in document.documentElement.style !== undefined && property in document.documentElement.style !== false ) {
+			while( ! supported && prefixes.length ){
+				if ( ( prefixes.shift() + "Transition" ) in styles ) {
 					supported = true;
-					break;
 				}
 			}
 			return supported;
