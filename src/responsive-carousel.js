@@ -16,6 +16,7 @@
 		activeClass = pluginName + "-active",
 		prevClass = pluginName + "-item-prev",
 		nextClass = pluginName + "-item-next",
+		inactiveClass = pluginName + "-item-inactive",
 		inClass = pluginName + "-in",
 		outClass = pluginName + "-out",
 		navClass =  pluginName + "-nav",
@@ -75,10 +76,10 @@
 					$prev = $items.last().not( "." + activeClass );
 				}
 
-				$items.removeClass( prevClass + " " + nextClass );
-				$prev.addClass( prevClass );
-				$next.addClass( nextClass );
-
+				$items.removeClass( prevClass + " " + nextClass ).addClass( inactiveClass );
+				$active.removeClass( inactiveClass );
+				$prev.removeClass( inactiveClass ).addClass( prevClass );
+				$next.removeClass( inactiveClass ).addClass( nextClass );
 			},
 
 			next: function(){
