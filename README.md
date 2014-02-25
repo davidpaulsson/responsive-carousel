@@ -1,8 +1,12 @@
+NOTE: This is a fork that contains fixes speficially to Svensk Fastighetsförmedling and may not be what's you're after. Check out the [original plugin instead](https://github.com/filamentgroup/responsive-carousel).
+
+---
+
 # Responsive Carousel
 
 A jQuery-based script for responsive carousels that work with mouse, touch, and keyboard
 
-[![Build Status](https://travis-ci.org/filamentgroup/responsive-carousel.png)](https://travis-ci.org/filamentgroup/responsive-carousel)
+[]![Build Status](https://travis-ci.org/filamentgroup/responsive-carousel.png)](https://travis-ci.org/filamentgroup/responsive-carousel)
 
 ## Getting Started
 Get the production version (.min.js) or the development version (.js) from the [releases page](https://github.com/filamentgroup/responsive-carousel/releases). Click the `dist-<version>.tar.gz` download.
